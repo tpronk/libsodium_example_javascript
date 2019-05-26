@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>libsodium_example_javascript</title>
+    <script src="libsodium_example.dev.js" type="text/javascript"></script>
+    <script>
+      generateKeys = function() {
+        var keyPair = libsodiumExample.generateKeys();
+        document.getElementById("secretKey").value = keyPair.secretKey;
+        document.getElementById("publicKey").value = keyPair.publicKey;
+      };
+      encrypt = function() {
+        var publicKey = document.getElementById("publicKey").value;
+        var decrypted = document.getElementById("decrypted").value;
+        var encrypted = libsodiumExample.encrypt(publicKey, decrypted);
+        document.getElementById("encrypted").value = encrypted;
+      };
+      decrypt = function() {
+        var secretKey = document.getElementById("secretKey").value;
+        var encrypted = document.getElementById("encrypted").value;
+        var decrypted = libsodiumExample.decrypt(secretKey, encrypted);
+        document.getElementById("decrypted").value = decrypted;
+      };      
+    </script> 
+  </head>
+  <body>
+    Secret Key<br />
+    <textarea id="secretKey" style="width:100%"></textarea>
+    Public Key<br />
+    <textarea id="publicKey" style="width:100%"></textarea>
+    Decrypted<br />
+    <textarea id="decrypted" style="width:100%">This is a test</textarea>
+    Encrypted<br />
+    <textarea id="encrypted" style="width:100%"></textarea>
+    <button onclick="generateKeys()">Generate Keypair</button>
+    <button onclick="encrypt()">Encrypt</button>
+    <button onclick="decrypt()">Decrypt</button>
+  </body>
+</html>

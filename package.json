@@ -1,0 +1,21 @@
+{
+  "name": "libsodium_example_javascript",
+  "version": "0.1.0",
+  "description": "",
+  "repository": "",
+  "license": "GPL-3",
+  "dependencies": {
+    "tweetnacl": "^1.0.1",
+    "tweetnacl-sealedbox-js": "^1.1.0",
+    "tweetnacl-util": "^0.15.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "main": "src/libsodium_example.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  }
+}
