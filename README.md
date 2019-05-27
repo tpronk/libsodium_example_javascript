@@ -6,24 +6,27 @@ The scripts in this repo show how to:
 
 For portability, all keys and encrypted data are stored in base64.
 
-# How to use it
+## How to use it
 The dist directory contains a pre-built bundle and a web-page via which you can run the example.
 
-# How to install it
+## How to install it
 * Install Node and NPM
 * Clone this repo
 * Open a command prompt
 * Navigate to the directory where you cloned this repo
 * Enter: **npm install**
 
-# How to build it
+## How to build it
 * Install Node and NPM
 * Clone this repo
 * Open a command prompt
 * Navigate to the directory where you cloned this repo
 * Enter: **npm run build**
 
-# Required modules
+## Required modules
 * [tweetnacl-js](https://github.com/dchest/tweetnacl-js)
 * [tweetnacl-sealedbox-js](https://github.com/whs/tweetnacl-sealed-box)
 * [tweetnac-util-s](https://github.com/dchest/tweetnacl-util-js)
+
+## Examples in other languages
+See the [libsodium_examples](https://github.com/users/tpronk/projects/1) project.
